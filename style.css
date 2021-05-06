@@ -31,3 +31,7 @@
 .estiloLapiz {
   background-image: url(./imgs/pencil.png);
 }
+
+.modoSeleccionado {
+  background-color: green;
+}

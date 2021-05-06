@@ -12,12 +12,17 @@ const inputColor = document.getElementById("inputColor");
 const inputColorFondo = document.getElementById("inputColorFondo");
 
 let modo = "";
-
+//evento del click en el boton del lapiz
 btnLapiz.addEventListener("click", function () {
   modo = "lapiz";
+  btnLapiz.classList.add("modoSeleccionado");
+  btnBorrar.classList.remove("modoSeleccionado");
 });
+
 btnBorrar.addEventListener("click", function () {
   modo = "goma";
+  btnBorrar.classList.add("modoSeleccionado");
+  btnLapiz.classList.remove("modoSeleccionado");
 });
 
 btnCrearGrid.addEventListener("click", function () {
@@ -33,12 +38,11 @@ btnCrearGrid.addEventListener("click", function () {
     grilla.addEventListener("click", function () {
       //modo goma.
       if (modo == "goma") {
-        grilla.classList.remove("pintado")
+        grilla.classList.remove("pintado");
         this.style.background = inputColorFondo.value;
       }
       // modo lapiz.
       if (modo == "lapiz") {
-
         grilla.classList.add("pintado");
         this.style.background = inputColor.value;
       }
