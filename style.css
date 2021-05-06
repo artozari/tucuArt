@@ -1,0 +1,33 @@
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: repeat(20, 1fr);
+}
+.grilla {
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+}
+.relleno {
+  background-color: black;
+}
+.formulario {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.estiloBorrar {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  outline: none;
+  border-radius: 10px;
+  background-image: url(./imgs/eraser.png);
+}
+.estiloLapiz {
+  background-image: url(./imgs/pencil.png);
+}
